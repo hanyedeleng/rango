@@ -23,5 +23,16 @@ class Page(models.Model):
     url = models.URLField()
     views = models.IntegerField(default=0)
 
+    def clean(self):
+        cleaned_data = self.cleaned_data
+        url = cleaned_data.get('url')
+
+        # If url is not empty and doesn't start with 'http://', prepend 'http://'.
+        if url and not url.startswith('http://'):
+            url = 'http://' + url
+            cleaned_data['url'] = url
+
+        return cleaned_data
+
     def __unicode__(self):      #For Python 2, use __str__ on Python 3
         return self.title
