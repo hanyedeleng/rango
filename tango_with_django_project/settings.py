@@ -12,6 +12,14 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+#check __file__, and other two 
+# setting.py
+# print __file__
+# /Users/xuegong/LTP/rango/tango_with_django_project/tango_with_django_project
+# print os.path.dirname(__file__)
+# /Users/xuegong/LTP/rango/tango_with_django_project
+# print os.path.dirname(os.path.dirname(__file__))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
@@ -82,3 +90,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Templates Path
+# absolute path "TEMPLATE_DIRS = ('<workspace>/tango_with_django_project/',)""
+TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+TEMPLATE_DIRS = (
+    TEMPLATE_PATH,
+)
