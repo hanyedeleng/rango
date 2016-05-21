@@ -11,3 +11,4 @@ lib64
 *.pyc
 *.pyo
 .DS_Store
+*/.DS_Store
