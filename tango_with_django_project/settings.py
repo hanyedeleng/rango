@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/1.7/ref/settings/
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-#check __file__, and other two 
+#check __file__, and other two
 # setting.py
 # print __file__
 # /Users/xuegong/LTP/rango/tango_with_django_project/tango_with_django_project
@@ -101,3 +101,5 @@ TEMPLATE_DIRS = (
     TEMPLATE_PATH,
 )
 
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
