@@ -7,4 +7,6 @@ def index(request):
     return render(request, 'rango/index.html', context_dict)
 
 def about(request):
-    return HttpResponse("Rango says here is the about page")
+	new_context_dict = {'boldmessage':"I am the king of birds"}
+
+	return render(request, 'rango/about.html', new_context_dict)
